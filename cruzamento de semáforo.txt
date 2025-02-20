@@ -1,0 +1,58 @@
+cruzamento de semáforo 
+/* 
+Autor: Bianca Castro
+Nome da programação: Aula 29-Cruzamento 
+Data:20/02/25
+Descrição:Fazer cruzamento de semáforo
+*/
+
+#define pinLedVerdeA 11
+#define tempoVerdeA 3000
+#define pinLedAmareloA 12
+#define tempoAmareloA 2000 
+#define pinLedVermelhoA 13
+
+
+#define pinLedVerdeB 6
+#define tempoVerdeB 3000
+#define pinLedAmareloB 5
+#define tempoAmareloB 2000
+#define pinLedVermelhoB 4
+
+
+void setup ()
+{
+pinMode (pinLedVerdeA,OUTPUT);
+pinMode (pinLedAmareloA,OUTPUT);
+pinMode (pinLedVermelhoA,OUTPUT);
+pinMode (pinLedVerdeB,OUTPUT);
+pinMode (pinLedAmareloB,OUTPUT);
+pinMode (pinLedVermelhoB,OUTPUT);
+}
+
+void loop ()
+{
+digitalWrite (pinLedVermelhoB,HIGH); 
+
+digitalWrite (pinLedVerdeA,HIGH);
+delay (tempoVerdeA);
+digitalWrite (pinLedVerdeA,LOW);
+
+digitalWrite (pinLedAmareloA,HIGH);
+delay (tempoAmareloA);
+digitalWrite (pinLedAmareloA,LOW);
+
+digitalWrite (pinLedVermelhoB,LOW);
+
+digitalWrite (pinLedVermelhoA,HIGH);
+
+digitalWrite (pinLedVerdeB,HIGH);
+delay (tempoVerdeB);
+digitalWrite (pinLedVerdeB,LOW);
+
+digitalWrite (pinLedAmareloB,HIGH);
+delay (tempoAmareloB);
+digitalWrite (pinLedAmareloB,LOW);
+
+digitalWrite (pinLedVermelhoA,LOW);
+}

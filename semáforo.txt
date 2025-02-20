@@ -1,0 +1,33 @@
+semáforo 
+/*
+Autor: Bianca Castro 
+Nome da programação:semáforo- aula 28 
+Data: 19/02/25
+Descrição: programando um semáforo
+*/
+
+#define pinLedVerde 11
+#define tempoLigadoVerde 3000
+#define pinLedAmarelo 12
+#define tempoLigadoAmarelo 2000
+#define pinLedVermelho 13
+#define tempoLigadoVermelho 5000
+
+void setup () //inicia arduino 
+{
+  pinMode (pinLedVerde,OUTPUT);
+  pinMode (pinLedAmarelo,OUTPUT);
+  pinMode (pinLedVermelho,OUTPUT);
+}
+void loop ()
+  {
+    digitalWrite (pinLedVerde,HIGH);
+    delay (tempoLigadoVerde);
+    digitalWrite (pinLedVerde,LOW);
+    digitalWrite (pinLedAmarelo,HIGH);
+    delay (tempoLigadoAmarelo);
+    digitalWrite (pinLedAmarelo,LOW);
+    digitalWrite (pinLedVermelho,HIGH);
+    delay (tempoLigadoVermelho);
+    digitalWrite (pinLedVermelho,LOW);
+}
